@@ -34,17 +34,17 @@ const styles = StyleSheet.create({
         paddingHorizontal: 1,
     },
     selectedSourceButton: {
-    paddingVertical: 4,
-    paddingHorizontal: 1,
-    borderBottomWidth: 1,
-    borderBottomColor: 'white',
-    alignSelf: 'flex-start',
+        paddingVertical: 4,
+        paddingHorizontal: 1,
+        borderBottomWidth: 1,
+        borderBottomColor: 'white',
+        alignSelf: 'flex-start',
     },
     sourceText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginRight: 0,
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginRight: 0,
     },
       
 }); 

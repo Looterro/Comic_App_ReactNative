@@ -104,21 +104,21 @@ const SplashScreen: React.FC = () => {
 const styles = StyleSheet.create({
 
     container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'black',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'black',
     },
     textContainer: {
-      alignItems: 'center',
+        alignItems: 'center',
     },
     text: {
-      color: 'white',
-      fontSize: 48,
-      maxWidth: '80%',
-      textAlign: 'center',
+        color: 'white',
+        fontSize: 48,
+        maxWidth: '80%',
+        textAlign: 'center',
     },
   
-  });
+});
 
 export default SplashScreen;

@@ -11,6 +11,7 @@ export type ComicSource = 'xkcd' | 'another_source';
 
 // Define the Comic type from xkcd.com API
 export interface Comic {
+
     month: string;
     num: number;
     link: string;
@@ -22,5 +23,6 @@ export interface Comic {
     img: string;
     title: string;
     day: string;
-  }
+    
+}
   

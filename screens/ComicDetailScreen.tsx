@@ -74,33 +74,33 @@ const ComicDetailScreen: React.FC<ComicDetailScreenProps> = ({ route, navigation
 const styles = StyleSheet.create({
 
     container: {
-      flexGrow: 1,
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      padding: 16,
-      backgroundColor: 'white',
+        flexGrow: 1,
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        padding: 16,
+        backgroundColor: 'white',
     },
     image: {
-      width: 300,
-      height: 400,
-      marginBottom: 16,
+        width: 300,
+        height: 400,
+        marginBottom: 16,
     },
     title: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      marginBottom: 8,
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 8,
     },
     subtitle: {
-      fontSize: 18,
-      marginBottom: 8,
-      color: 'gray',
+        fontSize: 18,
+        marginBottom: 8,
+        color: 'gray',
     },
     text: {
-      fontSize: 16,
-      marginBottom: 8,
-      color: 'gray',
+        fontSize: 16,
+        marginBottom: 8,
+        color: 'gray',
     },
   
-  });
+});
   
-  export default ComicDetailScreen;
+export default ComicDetailScreen;

@@ -125,7 +125,7 @@ const DashboardScreen: React.FC = () => {
         return (
 
             <View style={styles.containerLoad}>
-                <ActivityIndicator size="large" color="gray" />
+                <ActivityIndicator size="large" color="gray" testID="activity-indicator" />
             </View>
 
         );
@@ -186,33 +186,33 @@ const DashboardScreen: React.FC = () => {
 const styles = StyleSheet.create({
 
     container: {
-      flex: 1,
-      padding: 16,
-      borderRadius: 5,
+        flex: 1,
+        padding: 16,
+        borderRadius: 5,
     },
     containerLoad: {
-      flex: 1,
-      padding: 16,
-      borderRadius: 5,
-      alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
+        padding: 16,
+        borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     sourceContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      backgroundColor: 'black',
-      paddingHorizontal: 16,
-      paddingVertical: 8,
-      borderRadius: 5,
-      marginBottom: 16,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: 'black',
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+        borderRadius: 5,
+        marginBottom: 16,
     },
     sourceText: {
-      color: 'white',
-      fontSize: 16,
-      fontWeight: 'bold',
-      paddingRight: 8,
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
+        paddingRight: 8,
     },
   
-  });
+});
 
 export default DashboardScreen;
