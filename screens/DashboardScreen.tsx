@@ -6,6 +6,8 @@ import { useQuery } from "react-query";
 
 import { Comic, ComicSource, RootStackParamList } from "../constants/types";
 import { fetchComic } from "../helpers/fetchComic";
+import SourceButton from "../components/SourceButton";
+import ComicItem from "../components/ComicItem";
 
 const DashboardScreen: React.FC = () => {
 
@@ -153,10 +155,9 @@ const DashboardScreen: React.FC = () => {
 
                 <Text style={styles.sourceText}>Source: </Text>
                 
-                <TouchableOpacity>
-                    <Text style={styles.sourceText} onPress={() => handleSourceChange('xkcd')}> xkcd </Text>
-                    {/* Additional source buttons as needed */}
-                </TouchableOpacity>
+                <SourceButton source="xkcd" selectedSource={selectedSource} onPress={handleSourceChange} />
+                {/* Additional sources can be added here with another SourceButton */}
+                {/* <SourceButton source="another_source" selectedSource={selectedSource} onPress={handleSourceChange} /> */}
 
             </View>
 
@@ -173,11 +174,7 @@ const DashboardScreen: React.FC = () => {
                     offset: 92 * index,
                     index,
                 })}
-                renderItem={({ item }) => (
-                    <TouchableOpacity onPress={() => handleComicPress(item)}>
-                      <Text>{item.title}</Text>
-                    </TouchableOpacity>
-                )}
+                renderItem={({ item }) => <ComicItem comic={item} onPress={handleComicPress} />}
             />
 
         </View>
