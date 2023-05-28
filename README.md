@@ -27,7 +27,7 @@ React Native App that displays Comics from https://xkcd.com,  written for Androi
 
 ### Live Demo:
 
-[ComicApp_Demo.webm](https://github.com/Looterro/Comic_App_ReactNative/assets/73793088/8f14acf9-4c13-4644-93c4-92f1a1c2ae86)
+https://youtube.com/shorts/30IGfoqBc3g
 
 ## Getting Started with the app on Android
 
