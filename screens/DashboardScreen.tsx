@@ -31,7 +31,7 @@ const DashboardScreen: React.FC = () => {
                 const data = await response.json();
                 return data;
 
-            //Additional sources can be added here with another else if statements
+            //Additional active sources options to pick from can be added here with another else if statements
             // } else if (selectedSource === 'another_source') {
 
             //     const response = await fetch('https://api.replacethislink.com/comics/latest');
