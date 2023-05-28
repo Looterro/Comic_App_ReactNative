@@ -4,9 +4,11 @@ React Native App that displays Comics from https://xkcd.com,  written for Androi
 
 ### Functionality
 
-• The application shows the comics in a single scrollable flat list with each cell showing the image thumbnail and title
+• The application shows the comics in a single scrollable flat list with each cell showing the image thumbnail and title, starting from the newest comic at the top
 
 • User can tap on a given list cell to be presented with the comic more in detail, with a bigger comic image and additional optional information like transcript, news or date(when available in JSON)
+
+• The source section allows for switching between different comic sources, allowing for adding more sites and displaying different lists
 
 • The content is pulled from https://xkcd.com using react-query
 
