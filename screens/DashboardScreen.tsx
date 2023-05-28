@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { Text, View, FlatList, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 import { useQuery } from "react-query";
 
-import { Comic, ComicSource } from "../constants/types";
+import { Comic, ComicSource, RootStackParamList } from "../constants/types";
 import { fetchComic } from "../helpers/fetchComic";
 
 const DashboardScreen: React.FC = () => {
+
+    // Use react-navigation to get the navigation prop to navigate to the comic detail screen
+    const navigation = useNavigation<StackNavigationProp<RootStackParamList, 'Dashboard'>>();
 
     // Use state to keep track of the selected source and the list of comics
     const [selectedSource, setSelectedSource] = useState<ComicSource>('xkcd');
@@ -107,6 +112,11 @@ const DashboardScreen: React.FC = () => {
 
     };
 
+    // Handle when the user selects a comic to navigate to the comic detail screen
+    const handleComicPress = (comic: Comic) => {
+        navigation.navigate('ComicDetail', { comic });
+    };
+
     // Show the loading indicator if the latest comic or next comics are loading
     if (isLatestComicLoading || isLoading) {
 
@@ -143,8 +153,10 @@ const DashboardScreen: React.FC = () => {
 
                 <Text style={styles.sourceText}>Source: </Text>
                 
-                <Text style={styles.sourceText}> xkcd </Text>
-                {/* Additional source buttons as needed */}
+                <TouchableOpacity>
+                    <Text style={styles.sourceText} onPress={() => handleSourceChange('xkcd')}> xkcd </Text>
+                    {/* Additional source buttons as needed */}
+                </TouchableOpacity>
 
             </View>
 
@@ -162,7 +174,7 @@ const DashboardScreen: React.FC = () => {
                     index,
                 })}
                 renderItem={({ item }) => (
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleComicPress(item)}>
                       <Text>{item.title}</Text>
                     </TouchableOpacity>
                 )}

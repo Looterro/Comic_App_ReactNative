@@ -6,10 +6,13 @@ import { createStackNavigator, StackNavigationOptions } from "@react-navigation/
 import SplashScreen from "../screens/SplashScreen";
 import DashboardScreen from "../screens/DashboardScreen";
 import ComicDetailScreen from "../screens/ComicDetailScreen";
+import { RootStackParamList } from "../constants/types";
 
-// Create a stack navigator for the app screens
-const Stack = createStackNavigator();
+// Create a stack navigator for the app screens. 
+// RootStackParamList is a type that defines the screens and their parameters
+const Stack = createStackNavigator<RootStackParamList>();
 
+// Define the MainNavigator component that allows the user to navigate between the screens
 const MainNavigator = () => {
 
     // State to control the visibility of the splash screen
@@ -65,7 +68,10 @@ const MainNavigator = () => {
                         <Stack.Screen 
                             name="ComicDetail" 
                             component={ComicDetailScreen}
-                            options={{ title: "Comic details" }}
+                            options={({ route }) => ({
+                                // Set the title of the ComicDetail screen based on the selected comic
+                                title: route.params.comic.title + ' Detail',
+                            })}
                         />
 
                     </Stack.Navigator>

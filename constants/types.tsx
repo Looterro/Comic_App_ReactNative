@@ -1,5 +1,9 @@
+// Root paths for the app
 export type RootStackParamList = {
+    // Route name: 'Dashboard' with no parameters
     Dashboard: undefined;
+    // Route name: 'ComicDetail' with a parameter 'comic' of type Comic
+    ComicDetail: { comic: Comic };
 };
 
 // Define the ComicSource type, ability to add more sources
